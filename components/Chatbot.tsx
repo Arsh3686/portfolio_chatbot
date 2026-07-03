@@ -252,8 +252,8 @@ export default function Chatbot() {
                       {(() => {
                         if (isAI) {
                           try {
-                            const trimmed = msg.content.trim();
-                            if (trimmed.startsWith('{') && trimmed.endsWith('}')) {
+                            const trimmed = msg?.content?.trim();
+                            if (trimmed && trimmed.startsWith('{') && trimmed.endsWith('}')) {
                               const parsed = JSON.parse(trimmed);
                               if (parsed && Array.isArray(parsed.blocks)) {
                                 return <AIResponse blocks={parsed.blocks} />;
