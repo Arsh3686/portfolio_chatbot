@@ -30,7 +30,7 @@ export default function Chatbot() {
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:3001/ai/chat";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL + '/ai/chat' || "http://localhost:3001/ai/chat";
 
   const initializeWelcomeMessage = () => {
     const welcome: Message = {
