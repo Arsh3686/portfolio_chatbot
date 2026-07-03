@@ -13,13 +13,13 @@ export default function ProjectCard({
     return (
         <div className="rounded-xl border p-4 mt-4">
 
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
 
                 <h3 className="font-bold text-lg">
                     {title}
                 </h3>
 
-                <span className="text-xs bg-green-100 px-2 py-1 rounded">
+                <span className="text-xs bg-green-100 text-black px-2 py-1 rounded">
                     {status}
                 </span>
 
@@ -34,7 +34,7 @@ export default function ProjectCard({
                 {tech.map(skill => (
                     <span
                         key={skill}
-                        className="bg-gray-100 px-2 py-1 rounded text-xs"
+                        className="bg-gray-100 text-black px-2 py-1 rounded text-xs"
                     >
                         {skill}
                     </span>
